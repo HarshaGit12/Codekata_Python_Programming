@@ -1,4 +1,4 @@
-**1. Given 2 numbers N and K followed by elements of N .Print 'yes' if K exists else print 'no'.**
+**1. Given 2 numbers N and K followed by elements of N .Print 'yes' if K exists else print 'no'**
 
 Sample Testcase :
 INPUT
@@ -20,7 +20,7 @@ else:
   print("no")
 
 
-2. Given a number N, print 'yes' if it is composite else print 'no'.
+**2. Given a number N, print 'yes' if it is composite else print 'no'.**
 
 Sample Testcase :
 INPUT
@@ -43,7 +43,7 @@ elif num == 0 or num == 1:
 else:
   print("no")
   
-3. Write a code to get an integer N and print the even values from 1 till N in a separate line.
+**3. Write a code to get an integer N and print the even values from 1 till N in a separate line.**
 
 Input Description:
 A single line contains an integer N.
@@ -65,7 +65,7 @@ for i in range(1,n+1):
   if i%2 == 0:
     print(i)
 
-4. Write a code to get the input and print it 5 times.
+**4. Write a code to get the input and print it 5 times.**
 
 Input Description:
 A single line contains an integer N.
@@ -88,7 +88,7 @@ num = int(input())
 for i in range(0,5):
     print(num)
 
-5. Given 3 numbers N , L and R. Print 'yes' if N is between L and R else print 'no'.
+**5. Given 3 numbers N , L and R. Print 'yes' if N is between L and R else print 'no'.**
 
 Sample Testcase :
 INPUT
@@ -110,7 +110,7 @@ if (l<n<r):
 else:
   print("no")
 
-6. Given numbers A,B find A^B.
+**6. Given numbers A,B find A^B.**
 
 Input Size : 1 <= A <= 5 <= B <= 50
 Sample Testcase :
