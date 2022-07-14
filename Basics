@@ -1,4 +1,5 @@
 1. Given 2 numbers N and K followed by elements of N .Print 'yes' if K exists else print 'no'.
+
 Sample Testcase :
 INPUT
 4 2
@@ -17,3 +18,49 @@ if K in N:
   print("yes")
 else:
   print("no")
+
+
+2. Given a number N, print 'yes' if it is composite else print 'no'.
+
+Sample Testcase :
+INPUT
+123
+OUTPUT
+yes
+
+CODE:
+num = int(input())
+
+if num > 1:
+  for i in range(2,num):
+    if (num % i == 0):
+      print("yes")
+      break
+  else:
+    print("no")   
+elif num == 0 or num == 1:
+  print("no")
+else:
+  print("no")
+  
+3. Write a code to get an integer N and print the even values from 1 till N in a separate line.
+
+Input Description:
+A single line contains an integer N.
+
+Output Description:
+Print the even values from 1 to N in a separate line.
+
+Sample Input :
+6
+Sample Output :
+2
+4
+6
+
+CODE:
+n = int(input())
+
+for i in range(1,n+1):
+  if i%2 == 0:
+    print(i)
