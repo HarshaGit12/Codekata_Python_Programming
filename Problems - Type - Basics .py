@@ -19,7 +19,6 @@ if K in N:
 else:
   print("no")
 
-
 **2. Given a number N, print 'yes' if it is composite else print 'no'.**
 
 Sample Testcase :
