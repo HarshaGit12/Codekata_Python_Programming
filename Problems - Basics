@@ -64,3 +64,66 @@ n = int(input())
 for i in range(1,n+1):
   if i%2 == 0:
     print(i)
+
+4. Write a code to get the input and print it 5 times.
+
+Input Description:
+A single line contains an integer N.
+
+Output Description:
+Output contains 5 lines with each line having the value N.
+
+Sample Input :
+4
+Sample Output :
+4
+4
+4
+4
+4
+
+CODE:
+num = int(input())
+
+for i in range(0,5):
+    print(num)
+
+5. Given 3 numbers N , L and R. Print 'yes' if N is between L and R else print 'no'.
+
+Sample Testcase :
+INPUT
+3
+2 6
+OUTPUT
+yes
+
+CODE:
+num = int(input())
+t = list(map(int,input().split(" ")))
+
+n = num
+l = t[0]
+r = t[1]
+
+if (l<n<r):
+  print("yes")
+else:
+  print("no")
+
+6. Given numbers A,B find A^B.
+
+Input Size : 1 <= A <= 5 <= B <= 50
+Sample Testcase :
+INPUT
+3 4
+OUTPUT
+81
+
+CODE:
+p = list(input().split(" "))
+
+a = int(p[0])
+b = int(p[1])
+
+if (1<=a<=5 and 1<=b<=50):
+  print(a**b)
