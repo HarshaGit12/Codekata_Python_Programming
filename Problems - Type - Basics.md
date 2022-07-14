@@ -7,7 +7,7 @@ INPUT
 OUTPUT
 yes
 
-CODE:
+**CODE:**
 S = list(map(int,input().split(" ")))
 N = list(map(int,input().split(" ")))
 
@@ -28,7 +28,7 @@ INPUT
 OUTPUT
 yes
 
-CODE:
+**CODE:**
 num = int(input())
 
 if num > 1:
@@ -58,7 +58,7 @@ Sample Output :
 4
 6
 
-CODE:
+**CODE:**
 n = int(input())
 
 for i in range(1,n+1):
@@ -82,7 +82,7 @@ Sample Output :
 4
 4
 
-CODE:
+**CODE:**
 num = int(input())
 
 for i in range(0,5):
@@ -97,7 +97,7 @@ INPUT
 OUTPUT
 yes
 
-CODE:
+**CODE:**
 num = int(input())
 t = list(map(int,input().split(" ")))
 
@@ -119,7 +119,7 @@ INPUT
 OUTPUT
 81
 
-CODE:
+**CODE:**
 p = list(input().split(" "))
 
 a = int(p[0])
@@ -136,7 +136,7 @@ INPUT
 OUTPUT
 1
 
-CODE:
+**CODE:**
 l = list(map(int,input().split(" ")))
 
 min1 = l[0]
@@ -154,7 +154,7 @@ INPUT
 OUTPUT
 odd
 
-CODE:
+**CODE:**
 S = list(map(int,input().split(" ")))
 
 n = S[0]
@@ -176,7 +176,7 @@ INPUT
 OUTPUT
 0
 
-CODE:
+**CODE:**
 S = list(map(int,input().split(" ")))
 N = list(map(int,input().split(" ")))
 
@@ -199,7 +199,7 @@ INPUT
 OUTPUT
 4
 
-CODE:
+**CODE:**
 T = list(map(int,input().split(" ")))
 
 B = T[0]
