@@ -207,3 +207,23 @@ H = T[1]
 A = (1/2)*B*H
 
 print(A)
+
+**11. Write a code to get an integer N and print the digits of the integer.**
+
+Sample Input :
+348
+Sample Output :
+3 4 8
+
+**CODE:**
+s = input()
+
+dum = ""
+
+for i in range(0,len(s)):
+  if(i == len(s)-1):
+    dum = dum + s[i]
+  else:
+    dum = dum + s[i] + " "
+
+print(dum)
