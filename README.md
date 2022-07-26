@@ -1,2 +1,2 @@
 # Codekata_Python_Programming
-## Contains a number of Python Programming Problems and Answers
+## Contains a collection of Python Programming Problems and Answers
