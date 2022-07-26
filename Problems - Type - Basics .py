@@ -323,3 +323,77 @@ t = list(map(int,input().split(" ")))
 
 for i in range(0,t[1]):
     print(t[0])
+
+**16. Given a range of 2 numbers (i.e) L and R count the number of prime numbers in the range (inclusive of L and R ).**
+
+Input Size : L <= R <= 100000(complexity O(n) read about Sieve of Eratosthenes)
+Sample Testcase :
+INPUT
+2 5
+OUTPUT
+3
+
+**CODE:**
+l = list(map(int,input().split(" ")))
+
+lower = l[0]
+upper = l[1]
+
+array = []
+
+for num in range (lower, upper+1):
+ if num>1:
+  for i in range (2,num):
+   if num % i==0:
+    break
+  else:
+    array.append(num)
+print (len(array))
+
+**17. Given an array of N elements switch(swap) the element with the adjacent element and print the output.**
+
+Sample Testcase :
+INPUT
+5
+3 2 1 2 3
+OUTPUT
+2 3 2 1 3
+
+**CODE:**
+def swapTwo(x, y):
+  x = x ^ y
+  y = x ^ y
+  x = x ^ y
+  return x, y
+
+def rearrangeArray(a, n):
+  for i in range (0, n - 1, 2):
+    a[i], a[i + 1] = swapTwo(a[i], a[i + 1])
+  print(*a)
+
+n = int(input())
+
+arr = list(map(int,input().split(" ")))
+
+rearrangeArray(arr, n)
+
+**18. Given 3 numbers A,B,C process and print 'yes' if they can form the sides of a triangle otherwise print 'no'.**
+
+Input Size : A,B,C <= 100000
+Sample Testcase :
+INPUT
+3 4 5
+OUTPUT
+yes
+
+**CODE:**
+tr = list(map(int,input().split(" ")))
+
+A = tr[0]
+B = tr[1]
+C = tr[2]
+
+if A+B>C and B+C>A and C+A>B:
+    print('yes')
+else:
+    print('no')
