@@ -427,3 +427,22 @@ x = N*M
 perfsq(x)
 
 **20. Given 3 numbers A,B,C print 'yes' if they can form the sides of a right angled triangle,otherwise 'no'.**
+
+Input Size : A,B,C <= 100000
+Sample Testcase :
+INPUT
+3 4 5
+OUTPUT
+yes
+
+**CODE:**
+tr = list(map(int,input().split(" ")))
+
+A = tr[0]
+B = tr[1]
+C = tr[2]
+
+if A**2+B**2==C**2 or B**2+C**2==A**2 or C**2+A**2==B**2:
+    print('yes')
+else:
+    print('no')
