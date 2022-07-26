@@ -397,3 +397,33 @@ if A+B>C and B+C>A and C+A>B:
     print('yes')
 else:
     print('no')
+
+**19. Given 2 numbers N,M. Print 'yes' if their product is a perfect square else print 'no'.**
+
+Sample Testcase :
+INPUT
+5 5
+OUTPUT
+yes
+
+**CODE:**
+import math
+
+S = list(map(int,input().split(" ")))
+
+N = S[0]
+M = S[1]
+
+
+def perfsq(x):
+  if (math.ceil(math.sqrt(x)) == math.floor(math.sqrt(x))):
+    print('yes')
+  else:
+    print('no')
+
+
+x = N*M
+
+perfsq(x)
+
+**20. Given 3 numbers A,B,C print 'yes' if they can form the sides of a right angled triangle,otherwise 'no'.**
