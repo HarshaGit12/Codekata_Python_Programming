@@ -227,3 +227,99 @@ for i in range(0,len(s)):
     dum = dum + s[i] + " "
 
 print(dum)
+
+**12. Given a number N and an array of N elements, find the Bitwise OR of the array elements.**
+
+Input Size : N <= 100000
+Sample Testcase :
+INPUT
+2
+2 4
+OUTPUT
+6
+
+**CODE:**
+n = int(input())
+
+arr = list(map(int,input().split(" ")))
+
+def find_or(arr):
+  ans = arr[0]
+
+  for i in range(1,len(arr)):
+    ans = ans|arr[i]
+  return ans
+
+print(find_or(arr))
+
+**13. Write a code to get a integer n as input and calculate the smallest perfect power of 2 greater than n.**
+
+Input Description:
+A single line containing an integer,n.
+
+Output Description:
+Print the smallest perfect power of 2 greater than n.
+
+Sample Input :
+48
+Sample Output :
+64
+
+**CODE:**
+n = int(input())
+
+for i in range(0,2**1000):
+  if 2**i > n:
+    print(2**i)
+    break
+
+**14. Write a code to get an integer N and print the values from N to 1.**
+
+Input Description:
+A single line contains an integer N.
+
+Output Description:
+Print the values from N to 1 in a separate line.
+
+Sample Input :
+10
+Sample Output :
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+
+**CODE:**
+s = int(input())
+
+for i in range(0,s):
+    i = s
+    s = s-1
+    print(i)
+
+**15. Write a code to get 2 integers A and N. Print the integer A, N times in separate line.**
+
+Input Description:
+First line contains an integer A. Second line contains an Integer N.
+
+Output Description:
+Print the integer A, N times in a separate line.
+
+Sample Input :
+2 3
+Sample Output :
+2
+2
+2
+
+**CODE:**
+t = list(map(int,input().split(" ")))
+
+for i in range(0,t[1]):
+    print(t[0])
