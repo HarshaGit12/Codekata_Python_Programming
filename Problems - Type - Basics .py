@@ -446,3 +446,27 @@ if A**2+B**2==C**2 or B**2+C**2==A**2 or C**2+A**2==B**2:
     print('yes')
 else:
     print('no')
+
+**21. Given a string 'S' swap the even and odd characters starting from index 1(Assume the index starts from 0).**
+
+Input Size : |s| <= 10000000(complexity O(n))
+Sample Testcase :
+INPUT
+codekata
+OUTPUT
+ocedakat
+
+**CODE:**
+S = input()
+
+output = ''
+
+i = 0
+
+while i < len(S):
+  if i + 1 < len(S):
+    output = output + S[i + 1]
+    output = output + S[i]
+    i = i + 2
+print(output)
+
