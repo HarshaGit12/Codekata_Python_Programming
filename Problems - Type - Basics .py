@@ -470,3 +470,90 @@ while i < len(S):
     i = i + 2
 print(output)
 
+**22. Write a code to get 2 integers as input and find the HCF of the 2 integer without using recursion or Euclidean algorithm.**
+
+Input Description:
+A single line containing 2 integers separated by space.
+
+Output Description:
+Print the HCF of the integers.
+
+Sample Input :
+2 3
+Sample Output :
+1
+
+**CODE:**
+p = list(input().split(" "))
+
+x = int(p[0])
+y = int(p[1])
+
+if x > y:
+  smaller = y  
+else:
+  smaller = x
+for i in range(1,smaller + 1):
+  if((x % i == 0) and (y % i == 0)):
+    hcf = i 
+print(hcf) 
+
+**23. Write a code to get 2 integers as input and add the integers without any carry.**
+
+Input Description:
+A single line containing 2 integers.
+
+Output Description:
+Print sum of the 2 integers without carry
+
+Sample Input :
+44 66
+Sample Output :
+0
+
+**CODE:**
+import math
+ 
+def xSum(n, m) :
+  res = 0
+  multiplier = 1
+  bit_sum = 0
+  while (n or m) :
+    bit_sum = ((n % 10) + (m % 10))
+    bit_sum = bit_sum % 10
+    res = (bit_sum * multiplier) + res
+    n = math.floor(n / 10)
+    m = math.floor(m / 10)
+    multiplier = multiplier * 10
+  return res
+
+d = list(map(int,input().split(" ")))
+
+n = d[0]
+m = d[1]
+
+print(xSum(n, m))
+
+**24. Let P represent Paper, R represent Rock and S represent Scissors. Given 2 out of the 3 determine which one wins. If its a draw print 'D'.**
+
+Sample Testcase :
+INPUT
+R P
+OUTPUT
+P
+
+**CODE:**
+s = list(map(str,input().split(" ")))
+
+l = s[0]
+r = s[1]
+
+if l==r:
+  print("D")
+elif (l=='R' and r=='P') or (l=='P' and r=='R'):
+  print("P")
+elif (l=='P' and r=='S') or (l=='S' and r=='P'):
+  print("S")
+elif (l=='S' and r=='R') or (l=='R' and r=='S'):
+  print("R")
+
