@@ -615,3 +615,47 @@ for i in d:
   s = s + int(i)
 
 print(s)
+
+**28. Write a code to get an integer N and print values from 1 till N in a separate line.**
+
+Input Description:
+A single line contains an integer N.
+
+Output Description:
+Print the values from 1 to N in a separate line.
+
+Sample Input :
+5
+Sample Output :
+1
+2
+3
+4
+5
+
+**CODE:**
+num = int(input())
+
+for i in range(1,num+1):
+  print(i)
+
+**29. Write a program to print the sum of the first K natural numbers.**
+
+Input Size : n <= 100000
+Sample Testcase :
+INPUT
+3
+OUTPUT
+6
+
+**CODE:**
+n = int(input())
+
+dum = 0
+
+for i in range(1,n+1):
+
+  dum = dum + i
+
+print(dum)
+
