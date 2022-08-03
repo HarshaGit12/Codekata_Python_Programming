@@ -557,3 +557,61 @@ elif (l=='P' and r=='S') or (l=='S' and r=='P'):
 elif (l=='S' and r=='R') or (l=='R' and r=='S'):
   print("R")
 
+**25. Write a program to get a string as input and reverse the string without using temporary variable.**
+
+Input Description:
+A single line containing a string.
+
+Output Description:
+Print the reversed string.
+
+Sample Input :
+GUVI
+Sample Output :
+IVUG
+
+**CODE:**
+s = input()
+
+print(s[::-1])
+
+**26. Given a number N, print the Bitwise NOT of that number.**
+
+Input Size : 1 <= N <= 10000
+Sample Testcase :
+INPUT
+5
+OUTPUT
+-6
+
+**CODE:**
+n = int(input())
+
+def find_not(n):
+  ans = ~n
+  return ans
+
+print(find_not(n))
+
+**27. Write a code get an integer number as input and print the sum of the digits.**
+
+Input Description:
+A single line containing an integer.
+
+Output Description:
+Print the sum of the digits of the integer.
+
+Sample Input :
+124
+Sample Output :
+7
+
+**CODE:**
+d = input()
+
+s = 0
+
+for i in d:
+  s = s + int(i)
+
+print(s)
