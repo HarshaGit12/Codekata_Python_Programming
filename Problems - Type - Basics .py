@@ -726,7 +726,8 @@ Help Shapur find out how weak the Romans are.
 
 The first line of input contains a single number n, the number of men in Roman army. Next line contains n different positive integers powers of men in the Roman army.**
 Input Size : N<=100000
-  
+
+Sample Testcase :
 INPUT
 3
 3 2 1
@@ -779,6 +780,7 @@ print(getCount(arr, n))
 
 **33. Check whether the given 4 points form a square or not.**
 
+Sample Testcase :
 INPUT
 10 10
 10 20
@@ -832,4 +834,52 @@ if __name__=="__main__":
   else:
     print('no')
     
- 
+**34. Given a number N followed by N numbers.Find the smallest number and largest number and print both the indices(1 based indexing).**
+Input Size : N <= 100000 
+
+Sample Testcase :
+INPUT
+5
+1 2 3 4 5
+OUTPUT
+1 5  
+
+**CODE:**
+
+n = int(input())
+
+arr = list(map(int,input().split(" ")))
+a = min(arr)
+b = max(arr)
+print(1+arr.index(a),1+arr.index(b))
+
+** 35. Given a list of N coins, their values (V1, V2, … , VN), and the total sum S. Find the minimum number of coins the sum of which is S (we can use as many coins of one type as we want), if it is not possible to select coins in such a way that they sum up to S then print '-1'.
+Example: Given coins with values 1, 3, and 5. And the sum S is 11.
+Output: 3, 2 coins of 3 and 1 coin of 5**
+Input Size : N<=10000
+  
+Sample Testcase:
+INPUT
+3 11
+1 3 5
+OUTPUT
+3  
+
+** CODE:**
+  
+import sys
+def minCoins(coins, m, V):
+  if (V == 0):
+    return 0
+  res = sys.maxsize
+  for i in range(0, m):
+    if (coins[i] <= V):
+      sub_res = minCoins(coins, m, V-coins[i])
+      if (sub_res != sys.maxsize and sub_res + 1 < res):
+        res = sub_res + 1  
+  return res
+arr = list(map(int,input().split(" ")))
+m = arr[0]
+V = arr[1]
+coins = list(map(int,input().split(" ")))
+print(minCoins(coins, m, V))
