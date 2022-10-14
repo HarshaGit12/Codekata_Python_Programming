@@ -687,3 +687,32 @@ text = t[0]
 s = int(t[1])
 
 print(encrypt(text,s))
+
+
+** 31. Write a code get an integer number as input and print the odd and even digits of the number separately.**
+
+Sample Input :
+1234
+Sample Output :
+2 4
+1 3
+
+**CODE:**
+
+A = list(map(int,input()))
+
+A.sort()
+
+def splitevenodd(A): 
+   evenlist = [] 
+   oddlist = [] 
+   for i in A: 
+      if (i % 2 == 0): 
+         evenlist.append(i) 
+      else: 
+         oddlist.append(i)
+   print(*evenlist) 
+   print(*oddlist)  
+
+splitevenodd(A)
+
