@@ -661,7 +661,7 @@ print(dum)
 
 **30. The Caesar Cipher technique is one of the earliest and simplest method of encryption technique. It’s simply a type of substitution cipher, i.e., each letter of a 
 given text is replaced by a letter some fixed number of positions down the alphabet. For example with a shift of 1, A would be replaced by B, B would become C, and so on. 
-The method is apparently named after Julius Caesar, who apparently used it to communicate with his officials.For the given input string(S) and shift print the encrypted string.
+The method is apparently named after Julius Caesar, who apparently used it to communicate with his officials.For the given input string(S) and shift print the encrypted string.**
 
 Sample Testcase :
 INPUT
@@ -716,3 +716,120 @@ def splitevenodd(A):
 
 splitevenodd(A)
 
+** 32. The Romans have attacked again. This time they are much more than the Persians but Shapur is ready to defeat them. He says: 'A lion is never afraid of a hundred sheep'.
+
+Nevertheless Shapur has to find weaknesses in the Roman army to defeat them. So he gives the army a weakness number.
+
+In Shapur's opinion the weakness of an army is equal to the number of triplets i, j, k such that i < j < k and ai > aj > ak where ax is the power of man standing at position x. The Roman army has one special trait — powers of all the people in it are distinct.
+
+Help Shapur find out how weak the Romans are.
+
+The first line of input contains a single number n, the number of men in Roman army. Next line contains n different positive integers powers of men in the Roman army.**
+Input Size : N<=100000
+  
+INPUT
+3
+3 2 1
+OUTPUT
+1
+
+**CODE:**
+
+from bisect import bisect_left as lower_bound
+def update(BIT, n, i, val):
+  while i <= n:
+    BIT[i] += val
+    i += (i & -i)
+def query(BIT, i):
+  summ = 0
+  while i > 0:
+    summ += BIT[i]
+    i -= (i & -i)
+  return summ
+def convert(arr, n):
+  temp = [0] * n
+  for i in range(n):
+    temp[i] = arr[i]
+ 
+  temp.sort()
+ 
+  for i in range(n):
+    arr[i] = lower_bound(temp, arr[i]) + 1
+def getCount(arr, n):
+  convert(arr, n)
+ 
+  BIT = [0] * (n + 1)
+  smaller_right = [0] * (n + 1)
+  greater_left = [0] * (n + 1)
+  for i in range(n - 1, -1, -1):
+    smaller_right[i] = query(BIT, arr[i] - 1)
+    update(BIT, n, arr[i], 1)
+  for i in range(n + 1):
+    BIT[i] = 0
+  for i in range(n):
+    greater_left[i] = i - query(BIT, arr[i])
+    update(BIT, n, arr[i], 1)
+  ans = 0
+  for i in range(n):
+    ans += greater_left[i] * smaller_right[i]
+  return ans
+n = int(input())
+arr = list(map(int,input().split(" ")))
+print(getCount(arr, n))
+
+**33. Check whether the given 4 points form a square or not.**
+
+INPUT
+10 10
+10 20
+20 20
+20 10
+OUTPUT
+yes
+
+**CODE:**
+class Point:
+     
+  def __init__(self, x, y):
+    self.x = x
+    self.y = y
+def distSq(p, q):
+  return (p.x - q.x) * (p.x - q.x) + (p.y - q.y) * (p.y - q.y)
+
+def isSquare(p1, p2, p3, p4):
+ 
+  d2 = distSq(p1, p2) 
+  d3 = distSq(p1, p3) 
+  d4 = distSq(p1, p4)
+
+  if d2 == 0 or d3 == 0 or d4 == 0:   
+    return False 
+  if d2 == d3 and 2 * d2 == d4 and \
+                    2 * distSq(p2, p4) == distSq(p2, p3):
+    return True
+  if d3 == d4 and 2 * d3 == d2 and \
+                    2 * distSq(p3, p2) == distSq(p3, p4):
+    return True
+  if d2 == d4 and 2 * d2 == d3 and \
+                    2 * distSq(p2, p3) == distSq(p2, p4):
+    return True
+ 
+  return False
+
+a = list(map(int,input().split(" ")))
+b = list(map(int,input().split(" ")))
+c = list(map(int,input().split(" ")))
+d = list(map(int,input().split(" ")))
+
+if __name__=="__main__":
+  p1 = Point(a[0], a[1])
+  p2 = Point(b[0], b[1])
+  p3 = Point(c[0], c[1])
+  p4 = Point(d[0], d[1])
+     
+  if isSquare(p1, p2, p3, p4):
+    print('yes')
+  else:
+    print('no')
+    
+ 
