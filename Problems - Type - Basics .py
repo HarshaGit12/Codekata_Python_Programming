@@ -883,3 +883,26 @@ m = arr[0]
 V = arr[1]
 coins = list(map(int,input().split(" ")))
 print(minCoins(coins, m, V))
+
+** 36. Given a string S consisting of 2 words reverse the order of two words **
+Input Size : |S| <= 10000000
+
+Sample Testcase :
+INPUT
+hello world
+OUTPUT
+world hello
+
+**CODE:**
+
+S = list(input().split(" "))
+
+a = S[0]
+b = S[1]
+
+temp = a
+a = b
+b = temp
+
+print(a,b)
+
