@@ -949,3 +949,42 @@ def find_and(arr):
 
 print(find_and(arr))
 
+**39. Kabali is a brave warrior who with his group of young ninjas moves from one place to another to fight against his opponents. Before Fighting he just calculates one thing, the difference between his ninja number and the opponent's ninja number. From this difference he decides whether to fight or not. Kabali's ninja number is never greater than his opponent.
+Input
+The input contains two numbers in every line. These two numbers in each line denotes the number ninjas in Kabali's clan and his opponent's clan . print the absolute difference of number of ninjas between Kabali's clan and his opponent's clan. Each output should be in seperate line.**
+
+Sample Testcase :
+INPUT
+100 200
+OUTPUT
+100
+
+**CODE:**
+
+K = list(map(int,input().split(" ")))
+ad = abs(K[0]-K[1])
+print(ad)
+
+**40. Given 2 numbers N,M find the GCD of N and M.If it cannot be found for given number(s) then print -1**
+
+Sample Testcase :
+INPUT
+10 5
+OUTPUT
+5
+
+**CODE:**
+
+import math
+
+p = list(map(int,input().split(" ")))
+
+n = p[0]
+m = p[1]
+
+g = math.gcd(n,m)
+
+if n==0 or m==0:
+  print(-1)
+else:
+  print(g)
