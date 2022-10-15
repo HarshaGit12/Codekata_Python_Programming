@@ -906,3 +906,46 @@ b = temp
 
 print(a,b)
 
+** 37. Write a code to get an integer N and print the sum of  values from 1 to N.**
+Sample Input :
+10
+Sample Output :
+55
+
+**CODE:**
+
+n = int(input())
+
+dum = 0
+
+for i in range(1,n+1):
+    
+    dum = dum + i
+    
+print(dum)
+
+**38. Given a number N and an array of N elements ,find the Bitwise AND of the array elements.**
+Input Size N <= 100000
+
+Sample Testcase :
+INPUT
+4
+4 3 2 1
+OUTPUT
+0
+
+**CODE:**
+  
+n = int(input())
+
+arr = list(map(int,input().split(" ")))
+
+def find_and(arr):
+  ans = arr[0]
+
+  for i in range(1,n):
+    ans = ans&arr[i]
+  return ans
+
+print(find_and(arr))
+
