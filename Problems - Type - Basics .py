@@ -1021,3 +1021,36 @@ for j in range(n-2,n):
     else:
       nxtsmall.append(-1)    
 print(*nxtsmall)
+
+**42. You are given an array. Your task is to sort the array in given manner. Print the elements in increasing order of the frequency. If frequency is same print smaller one first.**
+
+Sample Input :
+4
+1 1 3 2
+Sample Output :
+2 3 1
+
+**CODE**
+
+from collections import defaultdict
+
+def sortByFreq(arr, n):
+    d = defaultdict(lambda: 0)
+    for i in range(n):
+        d[arr[i]] += 1
+    arr.sort(key=lambda x: (d[x], x))
+ 
+    return (arr)
+    
+    
+n = int(input())
+arr = list(map(int,input().split()))
+
+solution = sortByFreq(arr, n)
+
+freq = []
+for char in solution:
+    if char not in freq:
+        freq.append(char)
+
+print(*freq)
