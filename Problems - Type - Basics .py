@@ -988,3 +988,36 @@ if n==0 or m==0:
   print(-1)
 else:
   print(g)
+
+**41. You are given with an array. For each element present in the array your task is to print the next smallest than that number. If it is not smallest print -1**
+
+Sample Input :
+7
+10 7 9 3 2 1 15
+Sample Output :
+7 3 3 2 1 -1 -1
+
+**CODE**
+
+n = int(input())
+arr = list(map(int,input().split(" ")))
+nxtsmall = []
+for i in range(0,n-2):
+  if arr[i+1] < arr[i]:
+    nxtsmall.append(arr[i+1])
+  elif arr[i+2] < arr[i]:
+    nxtsmall.append(arr[i+2])
+  else:
+    nxtsmall.append(-1)
+for j in range(n-2,n):
+  if j == n-2:
+    if arr[j+1] < arr[j]:
+      nxtsmall.append(arr[j+1])
+    else:
+      nxtsmall.append(-1)
+  if j == n-1:
+    if arr[j] < arr[j-1]:
+      nxtsmall.append(arr[j])
+    else:
+      nxtsmall.append(-1)    
+print(*nxtsmall)
