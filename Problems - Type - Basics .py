@@ -1131,5 +1131,36 @@ arr = list(map(int,input().split()))
 k = int(input())
 printFirstNegativeInteger(arr, n, k)    
 
+**45. You are given with an circular array .Your task is calculate the difference between two consecutive number. And if difference is greater than ‘k’, print 1 else print 0
+
+Input Description:
+You are given two numbers ‘n’, ’m’. Next line contains n space separated integers.
+Output Description:
+Print 1 if the difference is greater than ‘m’.
+
+Sample Input :
+5 15
+50 65 85 98 35
+Sample Output :
+0 1 0 1 0
+
+**CODE**
+
+arn = list(map(int,input().split(" ")))
+arr = list(map(int,input().split(" ")))
+n = arn[0]
+m = arn[1]
+diff = []
+for i in range(1,n+1):
+  if i == n:
+    if abs(arr[0]-arr[i-1]) > m:
+      diff.append(1)
+    else:
+      diff.append(0)
+  elif abs(arr[i]-arr[i-1]) > m:
+    diff.append(1)
+  else:
+    diff.append(0)
+print(*diff)
 
 
