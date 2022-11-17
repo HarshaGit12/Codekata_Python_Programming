@@ -1054,3 +1054,39 @@ for char in solution:
         freq.append(char)
 
 print(*freq)
+
+**43. You are given with array of numbers.you have to find whether array is beautiful or not. A beautiful array is an array whose sum of all numbers is divisible by 2, 3 and 5
+
+Input Description:
+You are given a number ‘n’ denoting the size of array.Next line contains n space separated numbers.
+Output Description:
+Print 1 if array is beautiful and 0 if it is not
+
+Sample Input :
+5
+5 25 35 -5 30
+Sample Output :
+1
+
+**CODE**
+
+import math
+
+def LCMofArray(a):
+  lcm = a[0]
+  for i in range(1,len(a)):
+    lcm = lcm*a[i]//math.gcd(lcm, a[i])
+  return lcm
+
+arr1 = [2,3,5]
+n = int(input())
+arr = list(map(int,input().split(" ")))
+s = sum(arr)
+L = LCMofArray(arr1)
+
+if s%L == 0:
+  print(1)
+else:
+  print(0)
+  
+  
