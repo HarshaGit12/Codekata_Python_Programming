@@ -1236,4 +1236,53 @@ for (key, value) in freq.items():
     if value == 2:
         print(key)
 
+**49. You are given an array of numbers. Print the least occurring element. If there is more than 1 element print all of them in decreasing order of their value.**
 
+Input Description:
+You are given a number ‘n’ denoting size of array. Next line contains n space separated numbers.
+Output Description:
+Print the number as mentioned
+
+Sample Input :
+9
+1 6 4 56 56 56 6 4 2
+Sample Output :
+2 1
+
+**CODE**
+
+n = int(input())
+S = list(map(int,input().split(" ")))
+dup = []
+l=[]
+for char in S:
+  if S.count(char) > 1:
+    dup.append(char)
+
+for i in S:
+  if i not in dup:
+    l.append(i)
+l.sort(reverse = True)
+
+print(*l)
+
+**50. Given a number N, print the odd digits in the number(space seperated) or print -1 if there is no odd digit in the given number.**
+Input Size : N <= 100000
+
+Sample Testcase :
+INPUT
+2143
+OUTPUT
+1 3
+
+**CODE**
+
+n = input()
+odd = []
+for i in n:
+  if int(i)%2 !=0:
+    odd.append(i)
+if odd != []:
+  print(*odd)
+else:
+  print(-1)
