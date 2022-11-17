@@ -1163,4 +1163,28 @@ for i in range(1,n+1):
     diff.append(0)
 print(*diff)
 
+** 46. You are given with two arrays. Your task is to merge the array such that first array is in ascending order and second one in descending order.
+
+Input Description:
+First line contains two integer ‘n’ and ‘m’. ‘n’ denotes length of array 1 and ‘m’ of array 2.Next line contains n space separated numbers and third line contains ‘m’ space separated numbers
+Output Description:
+Print a single array in desired order
+
+Sample Input :
+3 3
+23 15 16
+357 65 10
+Sample Output :
+15 16 23 357 65 10
+
+**CODE**
+
+l = list(map(int,input().split(" ")))
+ar1 = list(map(int,input().split(" ")))
+ar2 = list(map(int,input().split(" ")))
+ar1.sort()
+ar2.sort(reverse=True)
+ar1.extend(ar2)
+print(*ar1)
+
 
