@@ -1055,7 +1055,7 @@ for char in solution:
 
 print(*freq)
 
-**43. You are given with array of numbers.you have to find whether array is beautiful or not. A beautiful array is an array whose sum of all numbers is divisible by 2, 3 and 5
+**43. You are given with array of numbers.you have to find whether array is beautiful or not. A beautiful array is an array whose sum of all numbers is divisible by 2, 3 and 5**
 
 Input Description:
 You are given a number ‘n’ denoting the size of array.Next line contains n space separated numbers.
@@ -1089,7 +1089,7 @@ if s%L == 0:
 else:
   print(0)
   
-**44. Assume you are a student studying in school.You are given a task to find first negative integer for each and every window of size k.
+**44. Assume you are a student studying in school.You are given a task to find first negative integer for each and every window of size k.**
 
 Input Description:
 First line contains an integer n denoting the size of the array. The next line contains n space separated integers forming the array. The last line contains the window size k.
@@ -1131,7 +1131,7 @@ arr = list(map(int,input().split()))
 k = int(input())
 printFirstNegativeInteger(arr, n, k)    
 
-**45. You are given with an circular array .Your task is calculate the difference between two consecutive number. And if difference is greater than ‘k’, print 1 else print 0
+**45. You are given with an circular array .Your task is calculate the difference between two consecutive number. And if difference is greater than ‘k’, print 1 else print 0**
 
 Input Description:
 You are given two numbers ‘n’, ’m’. Next line contains n space separated integers.
@@ -1163,7 +1163,7 @@ for i in range(1,n+1):
     diff.append(0)
 print(*diff)
 
-** 46. You are given with two arrays. Your task is to merge the array such that first array is in ascending order and second one in descending order.
+** 46. You are given with two arrays. Your task is to merge the array such that first array is in ascending order and second one in descending order.**
 
 Input Description:
 First line contains two integer ‘n’ and ‘m’. ‘n’ denotes length of array 1 and ‘m’ of array 2.Next line contains n space separated numbers and third line contains ‘m’ space separated numbers
@@ -1186,5 +1186,54 @@ ar1.sort()
 ar2.sort(reverse=True)
 ar1.extend(ar2)
 print(*ar1)
+
+** 47. You are given with an array of numbers, Your task is to print the difference of indices of largest and smallest number.All number are unique.**
+
+Input Description:
+First line contains a number ‘n’. Then next line contains n space separated numbers.
+Output Description:
+Print the difference of indices of largest and smallest array
+
+Sample Input :
+5
+1 6 4 0 3
+Sample Output :
+-2
+
+**CODE**
+
+n = int(input())
+arr = list(map(int,input().split(" ")))
+diff = arr.index(max(arr)) - arr.index(min(arr))
+print(diff)
+
+**48. You are provided with an array in which all elements are repeated thrice except one which is repeated twice.Your task is to print that number.**
+
+Input Description:
+First line contains a number denoting size of array ‘n’.Next line contains n space separated numbers
+Output Description:
+Print the number which is repeated twice
+
+Sample Input :
+5
+13 12 13 12 13
+Sample Output :
+12
+
+**CODE**
+
+import collections
+
+def CountFrequency(arr):
+    return collections.Counter(arr)  
+
+n = int(input())
+arr1 = list(map(str,input().split(" ")))
+
+freq = CountFrequency(arr1)
+
+for (key, value) in freq.items():
+    if value == 2:
+        print(key)
 
 
