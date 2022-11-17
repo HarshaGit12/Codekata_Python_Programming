@@ -1089,4 +1089,47 @@ if s%L == 0:
 else:
   print(0)
   
-  
+**44. Assume you are a student studying in school.You are given a task to find first negative integer for each and every window of size k.
+
+Input Description:
+First line contains an integer n denoting the size of the array. The next line contains n space separated integers forming the array. The last line contains the window size k.
+Output Description:
+Print the first negative integer in that window.If all the numbers are positive print 0
+
+Sample Input :
+7
+1 -2 -3 -4 5 6 -7
+3
+Sample Output :
+-2 -2 -3 -4 -7
+
+**CODE**
+
+def printFirstNegativeInteger(arr, n, k):
+    for i in range(0, (n - k + 1)):
+        flag = False
+        for j in range(0, k):
+            if (arr[i + j] < 0):
+                if i+j == n-1:
+                    print(arr[i + j], end = "")
+                    flag = True
+                else:    
+                    print(arr[i + j], end = " ")
+                    flag = True
+                    break
+                
+        if (not(flag)):
+            if i+j == n-1:
+                print(0, end = "")
+                    
+            else:    
+                print(0, end = " ")
+                
+                    
+n = int(input())
+arr = list(map(int,input().split()))
+k = int(input())
+printFirstNegativeInteger(arr, n, k)    
+
+
+
